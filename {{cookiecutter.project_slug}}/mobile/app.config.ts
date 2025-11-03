@@ -16,15 +16,13 @@ export default (): ExpoConfig => ({
     enabled: true
   },
   assetBundlePatterns: ["**/*"],
-  ios: {
-    supportsTablet: false
-  },
   android: {
     adaptiveIcon: {
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#ffffff"
     },
-    package: "com.deepneuro.app"
+    package: "com.deepneuro.app",
+    permissions: []
   },
   extra: {
     API_BASE_URL: process.env.API_BASE_URL ?? "http://127.0.0.1:8888"
